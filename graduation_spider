@@ -37,12 +37,7 @@ class spider(object):
     def saveinfo(self,classinfo):
         f = codecs.open('info.txt','w','utf-8')
         for each in classinfo:
-            f.writelines('year:' + each['year'] + '\n')
-            f.writelines('ID:' + each['ID'] + '\n')
-            f.writelines('name:' + each['name'] + '\n')
-            f.writelines('college:' + each['college'] + '\n')
-            f.writelines('subject:' + each['subject'] +'\n')
-            f.writelines('destination:' + each['destination'] + '\n\n')
+            f.writelines(each['year'] + ' ' + each['ID'] + ' ' + each['subject']+ ' '+ each['destination'] + ' ' + '\n')
         f.close()
 
 
